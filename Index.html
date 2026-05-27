@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>NanoNova Terminal</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="background-grid"></div>
+<div class="scanlines"></div>
+
+<div class="crt"></div>
+
+<!-- HEADER -->
+<header class="gov-header">
+
+    <div style="display:flex;align-items:center;gap:15px;">
+
+        <img src="assets/robotics-seal.png"
+        class="gov-seal">
+
+        <div>
+
+            <div class="gov-title">
+                NANONOVA ROBOTICS CLUB
+            </div>
+
+            <div class="gov-subtitle">
+                
+            </div>
+
+        </div>
+
+    </div>
+<div class="menu-toggle" onclick="toggleMenu()">
+
+    ☰
+
+</div>
+    <nav class="gov-nav" id="govNav">
+
+        <a href="#" class="active">
+            HOME
+            <span>MAIN-TERMINAL</span>
+        </a>
+
+        <a href="Registration.html">
+            REGISTRATION
+            <span>RI-001</span>
+        </a>
+
+    </nav>
+
+</header>
+
+<!-- TERMINAL -->
+<div class="monitor">
+
+    <div class="screen">
+
+        <!-- BOOT -->
+        <div class="boot-text">
+
+            <p>NANONOVA UNIFIED OPERATING SYSTEM</p>
+            <p>NANONOVA INFORMATION NETWORK INITIALIZED</p>
+            <p>PROGRAMMING DEPARTMENT</p>
+            <p>- SERGIO VERSION 001 -</p>
+
+        </div>
+
+        <!-- TABS -->
+        <div class="tabs">
+
+            <div class="tab active"
+            onclick="openTab('overview', this)">
+                [ OVERVIEW ]
+            </div>
+
+            <div class="tab"
+            onclick="openTab('Departments', this)">
+                [ DEPARTMENTS ]
+
+            </div>
+                       <div class="tab"
+            onclick="openTab('ArticleII', this)">
+                [ PURPOSE, MISSION & GOALS ]
+            </div>
+
+              <div class="tab"
+            onclick="openTab('website', this)">
+                [ WEBSITE DEVELOPMENT LOGS ]
+            </div>
+        </div>
+
+        <!-- GRID -->
+        <div class="terminal-grid">
+
+            <!-- LEFT -->
+            <div class="left-panel">
+
+                <!-- OVERVIEW -->
+                <div class="menu-page active-page"
+                id="overview">
+
+                    <div class="menu-item"
+                    onclick="showLog(homeData)">
+                        > Club Overview
+                    </div>
+
+                <div class="menu-item"
+                    onclick="showLog(preambleData)">
+                        > Preamble
+                    </div>
+
+                </div>
+
+                   <!-- WEBSITE -->
+                <div class="menu-page active-page"
+                id="Departments">
+
+                    <div class="menu-item"
+                    onclick="showLog(RBoverview)">
+                        >  Robotics Department
+                    </div>
+
+                    <div class="menu-item"
+                    onclick="showLog(PDoverview)">
+                        > Programming Department
+                    </div>
+
+                    <div class="menu-item"
+                    onclick="showLog(GDoverview)">
+                        > Graphics Department
+                    </div>
+
+                    <div class="menu-item"
+                    onclick="showLog(MDoverview)">
+                        > Media Department
+                    </div>
+                </div>
+
+                 <div class="menu-page active-page"
+                id="ArticleII">
+
+                    <div class="menu-item"
+                    onclick="showLog(SectionA)">
+                        >  Club Purpose and Mission
+                    </div>
+
+                    <div class="menu-item"
+                    onclick="showLog(SectionB)">
+                        > Club Goals
+                    </div>
+
+                    <div class="menu-item"
+                    onclick="showLog(SectionC)">
+                        > Vision
+                    </div>
+
+
+                </div>
+
+                <div class="menu-page active-page"
+                id="website">
+
+                    <div class="menu-item"
+                    onclick="showLog(LOGS1)">
+                        >  DEVELOPMENT LOG 001
+                    </div>
+
+                    <div class="menu-item"
+                    onclick="showLog(LOGS2)">
+                        > DEVELOPMENT LOG 002
+                    </div>
+
+                    <div class="menu-item"
+                    onclick="showLog(LOGS3)">
+                        > DEVELOPMENT LOG 004
+                    </div>
+
+                    <div class="menu-item"
+                    onclick="showLog(LOGS4)">
+                        > DEVELOPMENT LOG 004
+                    </div>
+                </div>
+                
+  
+            </div>
+
+            <!-- RIGHT -->
+            <div class="right-panel">
+
+                <div id="logOutput"
+                class="log-output">
+
+<div class="data-title">
+NANONOVA TERMINAL READY
+</div>
+
+SELECT DIRECTORY TO ACCESS FILES.
+
+<div class="data-grid">
+
+<div class="data-card">
+<h3>STATUS</h3>
+<p class="highlight">ONLINE</p>
+</div>
+
+<div class="data-card">
+<h3>INFORMATION DATA</h3>
+<p class="highlight">AVAILABLE</p>
+</div>
+
+</div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+<script>
+
+function toggleMenu(){
+
+    document
+    .getElementById("govNav")
+    .classList.toggle("show");
+
+}
+
+</script>
+<script src="script2.js"></script>
+
+</body>
+</html>
